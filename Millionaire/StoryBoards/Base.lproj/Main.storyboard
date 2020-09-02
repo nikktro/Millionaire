@@ -38,7 +38,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="I5K-GH-WtD" kind="show" id="K6J-wm-82g"/>
+                                            <segue destination="I5K-GH-WtD" kind="show" identifier="" id="K6J-wm-82g"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,10 +90,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2G-3q-QJs">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
                                                 <state key="normal" title="ButtonA"/>
+                                                <connections>
+                                                    <action selector="pressedA" destination="u5L-g2-Nk5" eventType="touchUpInside" id="SQd-eR-OH9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKu-wH-AXO">
                                                 <rect key="frame" x="0.0" y="60" width="105" height="30"/>
                                                 <state key="normal" title="ButtonC"/>
+                                                <connections>
+                                                    <action selector="pressedC" destination="u5L-g2-Nk5" eventType="touchUpInside" id="PRA-gp-nF1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -103,10 +109,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibl-y6-7gz">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
                                                 <state key="normal" title="ButtonB"/>
+                                                <connections>
+                                                    <action selector="pressedB" destination="u5L-g2-Nk5" eventType="touchUpInside" id="nBD-m6-Czs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV1-jb-6m9">
                                                 <rect key="frame" x="0.0" y="60" width="105" height="30"/>
                                                 <state key="normal" title="ButtonD"/>
+                                                <connections>
+                                                    <action selector="pressedD" destination="u5L-g2-Nk5" eventType="touchUpInside" id="Mva-O9-O2b"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
