@@ -8,9 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
-
-    
+class GameViewController: UIViewController, GameVCDelegate {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerButtonA: UIButton!
@@ -20,18 +18,20 @@ class GameViewController: UIViewController {
     
     var gameSession = GameSession()
     
-    weak var gameDelegate: GameDelegate?
+    weak var gameSessionDelegate: GameSessionDelegate?
     
         
     override func viewDidLoad() {
         super.viewDidLoad()
         Game.shared.gameSession = gameSession
-        gameDelegate = gameSession
-        showLevel(with: gameSession.gameLevel)
+        gameSessionDelegate = gameSession
+        gameSession.gameVCDeledate = self
+        showLevel(gameSession.gameLevel)
     }
     
-    func showLevel(with level: Int) {
+    func showLevel(_ level: Int) {
         let questions = gameSession.questions
+        
         questionLabel.text = questions[level].question
         answerButtonA.setTitle(questions[level].answers["A"], for: .normal)
         answerButtonB.setTitle(questions[level].answers["B"], for: .normal)
@@ -40,29 +40,31 @@ class GameViewController: UIViewController {
     }
     
     func endGame() {
+        let percentAnswer = Game.shared.calcRightAnswer()
+        print("Right answers \(percentAnswer)%")
         dismiss(animated: true, completion: nil)
     }
     
     
     
     @IBAction func pressedA() {
-        gameDelegate?.sendData(userAnswer: "A") //TODO
-        showLevel(with: gameSession.gameLevel)
+        gameSessionDelegate?.checkAnswer(userAnswer: "A") //TODO
+        showLevel(gameSession.gameLevel)
     }
     
     @IBAction func pressedB() {
-        gameDelegate?.sendData(userAnswer: "B") //TODO
-        showLevel(with: gameSession.gameLevel)
+        gameSessionDelegate?.checkAnswer(userAnswer: "B") //TODO
+        showLevel(gameSession.gameLevel)
     }
     
     @IBAction func pressedC() {
-        gameDelegate?.sendData(userAnswer: "C") //TODO
-        showLevel(with: gameSession.gameLevel)
+        gameSessionDelegate?.checkAnswer(userAnswer: "C") //TODO
+        showLevel(gameSession.gameLevel)
     }
     
     @IBAction func pressedD() {
-        gameDelegate?.sendData(userAnswer: "D") //TODO
-        showLevel(with: gameSession.gameLevel)
+        gameSessionDelegate?.checkAnswer(userAnswer: "D") //TODO
+        showLevel(gameSession.gameLevel)
     }
     
 

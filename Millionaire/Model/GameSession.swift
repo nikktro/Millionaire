@@ -12,22 +12,28 @@ class GameSession {
     
     let questions = Question.getQuestions()
     var gameLevel = 0
-    
+    var rightAnswer = 0
+    weak var gameVCDeledate: GameVCDelegate?
 }
 
-extension GameSession: GameDelegate {
-    func sendData(userAnswer: String) {
-        if questions[gameLevel].rightAnswer == userAnswer {
-            print("Right")
-            gameLevel += 1
-            // TODO
-        } else {
-            let percentAnswer = Game.shared.calcRightAnswer()
-            print("You lose, right answers \(percentAnswer)%") // TODO
-            
-            
-        }
-    }
+extension GameSession: GameSessionDelegate {
     
+    func checkAnswer(userAnswer: String) {
+        if  userAnswer == questions[gameLevel].rightAnswer {
+            print("Right answer")
+            rightAnswer += 1
+            
+            if gameLevel >= (questions.count - 1)  {
+                gameVCDeledate?.endGame()
+            } else {
+                gameLevel += 1
+            }
+        
+        } else {
+            print("You lose")
+            gameVCDeledate?.endGame()
+        }
+        
+    }
     
 }

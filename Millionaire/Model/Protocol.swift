@@ -8,7 +8,10 @@
 
 import Foundation
 
-protocol GameDelegate: class {
-    func sendData(userAnswer: String)
+protocol GameSessionDelegate: class {
+    func checkAnswer(userAnswer: String)
 }
 
+protocol GameVCDelegate: class {
+    func endGame()
+}

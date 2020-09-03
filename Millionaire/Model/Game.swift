@@ -18,7 +18,7 @@ class Game {
     
     func calcRightAnswer() -> Double {
         guard let gameSession = gameSession else { return 0 }
-        return Double((gameSession.gameLevel * 100) / gameSession.questions.count)
+        return Double((gameSession.rightAnswer * 100) / gameSession.questions.count)
     }
     
     func storeResult() {
