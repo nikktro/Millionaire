@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B193C1D02504E90E00EB7719 /* StatisticsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */; };
+		B193C1D22504E97A00EB7719 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D12504E97A00EB7719 /* Statistic.swift */; };
+		B193C1D5250503A000EB7719 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D4250503A000EB7719 /* AlertController.swift */; };
+		B193C1D725054C2600EB7719 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D625054C2600EB7719 /* Animations.swift */; };
 		B19520A624FEE69800AEBAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19520A524FEE69800AEBAA6 /* AppDelegate.swift */; };
 		B19520A824FEE69800AEBAA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19520A724FEE69800AEBAA6 /* SceneDelegate.swift */; };
 		B19520AA24FEE69800AEBAA6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19520A924FEE69800AEBAA6 /* MainViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCaretaker.swift; sourceTree = "<group>"; };
+		B193C1D12504E97A00EB7719 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		B193C1D4250503A000EB7719 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		B193C1D625054C2600EB7719 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		B19520A224FEE69800AEBAA6 /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19520A524FEE69800AEBAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B19520A724FEE69800AEBAA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B193C1CE2504E85800EB7719 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */,
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		B193C1D32505038000EB7719 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B193C1D4250503A000EB7719 /* AlertController.swift */,
+				B193C1D625054C2600EB7719 /* Animations.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B195209924FEE69800AEBAA6 = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +93,10 @@
 		B19520A424FEE69800AEBAA6 /* Millionaire */ = {
 			isa = PBXGroup;
 			children = (
+				B193C1CE2504E85800EB7719 /* Memento */,
 				B19520BA24FEE74000AEBAA6 /* Model */,
 				B19520B924FEE72E00AEBAA6 /* ViewControllers */,
+				B193C1D32505038000EB7719 /* Helpers */,
 				B19520BC24FEE77C00AEBAA6 /* Storyboards */,
 				B19520C325001B8E00AEBAA6 /* Resources */,
 				B19520BB24FEE74E00AEBAA6 /* App */,
@@ -95,6 +122,7 @@
 				B19520C42500296A00AEBAA6 /* GameSession.swift */,
 				B19520C62500339400AEBAA6 /* Game.swift */,
 				B19520CA2500652100AEBAA6 /* Protocol.swift */,
+				B193C1D12504E97A00EB7719 /* Statistic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,9 +228,13 @@
 				B19520AA24FEE69800AEBAA6 /* MainViewController.swift in Sources */,
 				B19520A624FEE69800AEBAA6 /* AppDelegate.swift in Sources */,
 				B19520C224FEEC5000AEBAA6 /* Question.swift in Sources */,
+				B193C1D5250503A000EB7719 /* AlertController.swift in Sources */,
 				B19520C52500296A00AEBAA6 /* GameSession.swift in Sources */,
 				B19520CB2500652100AEBAA6 /* Protocol.swift in Sources */,
+				B193C1D725054C2600EB7719 /* Animations.swift in Sources */,
 				B19520A824FEE69800AEBAA6 /* SceneDelegate.swift in Sources */,
+				B193C1D02504E90E00EB7719 /* StatisticsCaretaker.swift in Sources */,
+				B193C1D22504E97A00EB7719 /* Statistic.swift in Sources */,
 				B19520C024FEEADD00AEBAA6 /* TopResultsTableViewController.swift in Sources */,
 				B19520C72500339400AEBAA6 /* Game.swift in Sources */,
 			);

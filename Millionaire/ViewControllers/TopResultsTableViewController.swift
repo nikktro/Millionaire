@@ -9,8 +9,6 @@
 import UIKit
 
 class TopResultsTableViewController: UITableViewController {
-
-    let results = Game.shared.results
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +19,17 @@ class TopResultsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return Game.shared.statistics.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topResults", for: indexPath)
-
-        cell.textLabel?.text = "TODO"
-
+        
+        let statistic = Game.shared.statistics.reversed()[indexPath.row]
+        cell.textLabel?.text = statistic.ratingBar + " \(Game.shared.calcRightAnswer(statistic))%"
+        cell.detailTextLabel?.text = String(statistic.currentDate)
+        
         return cell
     }
     

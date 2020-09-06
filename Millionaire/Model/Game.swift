@@ -11,19 +11,29 @@ import Foundation
 class Game {
     
     static let shared = Game()
+    
+    private let statisticCaretaker = StatisticsCaretaker()
+    private(set) var statistics: [Statistic] {
+        didSet {
+            statisticCaretaker.save(statistics: statistics)
+        }
+    }
+    
     var gameSession: GameSession?
-    var results: [GameSession] = []
     
-    private init() { }
-    
-    func calcRightAnswer() -> Double {
-        guard let gameSession = gameSession else { return 0 }
-        return Double((gameSession.rightAnswer * 100) / gameSession.questions.count)
+    private init() {
+        self.statistics = statisticCaretaker.load()
     }
     
-    func storeResult() {
-        guard let gameSession = gameSession else { return }
-        results.append(gameSession)
+    func calcRightAnswer(_ statistic: Statistic) -> Double {
+        return Double((statistic.gameLevel * 100) / statistic.questionsCount)
     }
+    
+    func addStatistic(_ record: Statistic) {
+        statistics.append(record)
+        gameSession = nil
+    }
+    
+    
     
 }

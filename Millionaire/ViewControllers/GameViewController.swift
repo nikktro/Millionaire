@@ -40,8 +40,10 @@ class GameViewController: UIViewController, GameVCDelegate {
     }
     
     func endGame() {
-        let percentAnswer = Game.shared.calcRightAnswer()
-        print("Right answers \(percentAnswer)%")
+        let record = Statistic(date: Date(),
+                               gameLevel: gameSession.rightAnswer,
+                               questionsCount: gameSession.questions.count)
+        Game.shared.addStatistic(record)
         dismiss(animated: true, completion: nil)
     }
     
