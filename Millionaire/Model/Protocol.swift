@@ -15,3 +15,9 @@ protocol GameSessionDelegate: class {
 protocol GameVCDelegate: class {
     func endGame()
 }
+
+protocol StrategyProtocol {
+    func setParameter()
+    func getParameter() -> ParameterStruct
+}
+
