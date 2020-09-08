@@ -245,7 +245,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-gf-hm5">
-                                <rect key="frame" x="20" y="472" width="335" height="32"/>
+                                <rect key="frame" x="20" y="451" width="335" height="32"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Сonsistently"/>
@@ -253,25 +253,48 @@
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions Sequence:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nj-GE-coT">
+                                <rect key="frame" x="20" y="402" width="335" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84W-Xd-PW8">
+                                <rect key="frame" x="161.5" y="522" width="52" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="Cb2-Ac-V78" kind="unwind" unwindAction="unwind:" id="PGN-UE-6JO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4nj-GE-coT" firstAttribute="leading" secondItem="w5h-CY-8ga" secondAttribute="leading" constant="20" id="2nB-fw-QjL"/>
                             <constraint firstItem="wTW-5U-rx1" firstAttribute="top" secondItem="w5h-CY-8ga" secondAttribute="top" constant="100" id="6T5-cc-4c3"/>
-                            <constraint firstItem="w5h-CY-8ga" firstAttribute="trailing" secondItem="jhI-gf-hm5" secondAttribute="trailing" constant="20" id="7ja-NR-mvo"/>
                             <constraint firstItem="hdr-Yf-cqz" firstAttribute="leading" secondItem="aHt-Z5-ara" secondAttribute="leading" constant="10" id="ItK-ad-5qQ"/>
-                            <constraint firstItem="jhI-gf-hm5" firstAttribute="leading" secondItem="w5h-CY-8ga" secondAttribute="leading" constant="20" id="PZ1-GJ-o2C"/>
                             <constraint firstItem="wTW-5U-rx1" firstAttribute="leading" secondItem="w5h-CY-8ga" secondAttribute="leading" constant="10" id="RTq-Sp-Vyp"/>
+                            <constraint firstItem="84W-Xd-PW8" firstAttribute="centerX" secondItem="aHt-Z5-ara" secondAttribute="centerX" id="ZJh-pf-YNZ"/>
+                            <constraint firstItem="4nj-GE-coT" firstAttribute="top" secondItem="wTW-5U-rx1" secondAttribute="bottom" constant="-50" id="jQS-oD-4fu"/>
                             <constraint firstItem="hdr-Yf-cqz" firstAttribute="centerX" secondItem="aHt-Z5-ara" secondAttribute="centerX" id="jtp-TK-qy1"/>
+                            <constraint firstItem="jhI-gf-hm5" firstAttribute="leading" secondItem="w5h-CY-8ga" secondAttribute="leading" constant="20" id="l1T-8N-kS1"/>
                             <constraint firstItem="wTW-5U-rx1" firstAttribute="centerX" secondItem="aHt-Z5-ara" secondAttribute="centerX" id="lBF-2U-FMN"/>
+                            <constraint firstItem="w5h-CY-8ga" firstAttribute="trailing" secondItem="4nj-GE-coT" secondAttribute="trailing" constant="20" id="qTg-ok-MGl"/>
                             <constraint firstItem="hdr-Yf-cqz" firstAttribute="centerY" secondItem="aHt-Z5-ara" secondAttribute="centerY" id="uXP-mD-fNf"/>
-                            <constraint firstItem="jhI-gf-hm5" firstAttribute="top" secondItem="wTW-5U-rx1" secondAttribute="bottom" constant="20" id="z1G-sQ-EwE"/>
+                            <constraint firstItem="jhI-gf-hm5" firstAttribute="top" secondItem="4nj-GE-coT" secondAttribute="bottom" constant="20" id="uce-LO-sR0"/>
+                            <constraint firstItem="84W-Xd-PW8" firstAttribute="top" secondItem="jhI-gf-hm5" secondAttribute="bottom" constant="40" id="umo-JD-JSJ"/>
+                            <constraint firstItem="w5h-CY-8ga" firstAttribute="trailing" secondItem="jhI-gf-hm5" secondAttribute="trailing" constant="20" id="yEl-n9-BBt"/>
                             <constraint firstItem="w5h-CY-8ga" firstAttribute="trailing" secondItem="wTW-5U-rx1" secondAttribute="trailing" constant="10" id="zjA-rB-dEY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w5h-CY-8ga"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ev0-Sb-0GA"/>
+                    <connections>
+                        <outlet property="sequenceSelector" destination="jhI-gf-hm5" id="F6a-xj-lpG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucH-ha-Pdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cb2-Ac-V78" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="913" y="137"/>
         </scene>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10AB7042507DDA3001E49D9 /* SequenceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AB7032507DDA3001E49D9 /* SequenceStrategy.swift */; };
 		B193C1D02504E90E00EB7719 /* StatisticsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */; };
 		B193C1D22504E97A00EB7719 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D12504E97A00EB7719 /* Statistic.swift */; };
 		B193C1D5250503A000EB7719 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D4250503A000EB7719 /* AlertController.swift */; };
@@ -23,11 +24,11 @@
 		B19520C52500296A00AEBAA6 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19520C42500296A00AEBAA6 /* GameSession.swift */; };
 		B19520C72500339400AEBAA6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19520C62500339400AEBAA6 /* Game.swift */; };
 		B19520CB2500652100AEBAA6 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19520CA2500652100AEBAA6 /* Protocol.swift */; };
-		B1D5E2FE2506A47B0024705B /* ParameterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5E2FD2506A47B0024705B /* ParameterStruct.swift */; };
 		B1D5E3002506A4AF0024705B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5E2FF2506A4AF0024705B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B10AB7032507DDA3001E49D9 /* SequenceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceStrategy.swift; sourceTree = "<group>"; };
 		B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCaretaker.swift; sourceTree = "<group>"; };
 		B193C1D12504E97A00EB7719 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		B193C1D4250503A000EB7719 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		B19520C42500296A00AEBAA6 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		B19520C62500339400AEBAA6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B19520CA2500652100AEBAA6 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		B1D5E2FD2506A47B0024705B /* ParameterStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterStruct.swift; sourceTree = "<group>"; };
 		B1D5E2FF2506A4AF0024705B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10AB6FE2507DCF6001E49D9 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				B10AB7032507DDA3001E49D9 /* SequenceStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
 		B193C1CE2504E85800EB7719 /* Memento */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +105,7 @@
 		B19520A424FEE69800AEBAA6 /* Millionaire */ = {
 			isa = PBXGroup;
 			children = (
+				B10AB6FE2507DCF6001E49D9 /* Strategies */,
 				B193C1CE2504E85800EB7719 /* Memento */,
 				B19520BA24FEE74000AEBAA6 /* Model */,
 				B19520B924FEE72E00AEBAA6 /* ViewControllers */,
@@ -128,7 +137,6 @@
 				B19520C62500339400AEBAA6 /* Game.swift */,
 				B19520CA2500652100AEBAA6 /* Protocol.swift */,
 				B193C1D12504E97A00EB7719 /* Statistic.swift */,
-				B1D5E2FD2506A47B0024705B /* ParameterStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,7 +249,7 @@
 				B1D5E3002506A4AF0024705B /* SettingsViewController.swift in Sources */,
 				B19520A824FEE69800AEBAA6 /* SceneDelegate.swift in Sources */,
 				B193C1D02504E90E00EB7719 /* StatisticsCaretaker.swift in Sources */,
-				B1D5E2FE2506A47B0024705B /* ParameterStruct.swift in Sources */,
+				B10AB7042507DDA3001E49D9 /* SequenceStrategy.swift in Sources */,
 				B193C1D22504E97A00EB7719 /* Statistic.swift in Sources */,
 				B19520C024FEEADD00AEBAA6 /* TopResultsTableViewController.swift in Sources */,
 				B19520C72500339400AEBAA6 /* Game.swift in Sources */,

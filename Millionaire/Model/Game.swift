@@ -21,6 +21,8 @@ class Game {
     
     var gameSession: GameSession?
     
+    var selectedSequenceIndex = 0
+    
     private init() {
         self.statistics = statisticCaretaker.load()
     }

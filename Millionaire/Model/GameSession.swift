@@ -10,7 +10,7 @@ import Foundation
 
 class GameSession {
     
-    let questions = Question.getQuestions()
+    let questions = GenerateQuestion.questionStrategy(selectedSequenceIndex: Game.shared.selectedSequenceIndex)
     var gameLevel = 0
     var rightAnswer = 0
     weak var gameVCDeledate: GameVCDelegate?

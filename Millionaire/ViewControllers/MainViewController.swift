@@ -14,6 +14,11 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func unwind(_ seg: UIStoryboardSegue) {
+        let settingsVC = seg.source as! SettingsViewController
+        Game.shared.selectedSequenceIndex = settingsVC.sequenceSelector.selectedSegmentIndex
+    }
 
 
 }
