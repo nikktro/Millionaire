@@ -11,7 +11,7 @@ import Foundation
 class GameSession {
     
     let questions = GenerateQuestion.questionStrategy(selectedSequenceIndex: Game.shared.selectedSequenceIndex)
-    var gameLevel = 0
+    var gameLevel = Observable<Int>(0)
     var rightAnswer = 0
     weak var gameVCDeledate: GameVCDelegate?
 }
@@ -19,14 +19,14 @@ class GameSession {
 extension GameSession: GameSessionDelegate {
     
     func checkAnswer(userAnswer: String) {
-        if  userAnswer == questions[gameLevel].rightAnswer {
+        if  userAnswer == questions[gameLevel.value].rightAnswer {
             print("Right answer")
             rightAnswer += 1
             
-            if gameLevel >= (questions.count - 1)  {
+            if gameLevel.value >= (questions.count - 1)  {
                 gameVCDeledate?.endGame()
             } else {
-                gameLevel += 1
+                gameLevel.value += 1
             }
         
         } else {

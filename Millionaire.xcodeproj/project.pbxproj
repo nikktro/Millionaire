@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B10AB7042507DDA3001E49D9 /* SequenceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AB7032507DDA3001E49D9 /* SequenceStrategy.swift */; };
+		B11A41EF2509F827000B433E /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A41EE2509F827000B433E /* Observable.swift */; };
 		B193C1D02504E90E00EB7719 /* StatisticsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */; };
 		B193C1D22504E97A00EB7719 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D12504E97A00EB7719 /* Statistic.swift */; };
 		B193C1D5250503A000EB7719 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193C1D4250503A000EB7719 /* AlertController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		B10AB7032507DDA3001E49D9 /* SequenceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceStrategy.swift; sourceTree = "<group>"; };
+		B11A41EE2509F827000B433E /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		B193C1CF2504E90E00EB7719 /* StatisticsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCaretaker.swift; sourceTree = "<group>"; };
 		B193C1D12504E97A00EB7719 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		B193C1D4250503A000EB7719 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			path = Strategies;
 			sourceTree = "<group>";
 		};
+		B11A41ED2509F813000B433E /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				B11A41EE2509F827000B433E /* Observable.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
 		B193C1CE2504E85800EB7719 /* Memento */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		B19520A424FEE69800AEBAA6 /* Millionaire */ = {
 			isa = PBXGroup;
 			children = (
+				B11A41ED2509F813000B433E /* Observer */,
 				B10AB6FE2507DCF6001E49D9 /* Strategies */,
 				B193C1CE2504E85800EB7719 /* Memento */,
 				B19520BA24FEE74000AEBAA6 /* Model */,
@@ -239,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19520BE24FEE81B00AEBAA6 /* GameViewController.swift in Sources */,
+				B11A41EF2509F827000B433E /* Observable.swift in Sources */,
 				B19520AA24FEE69800AEBAA6 /* MainViewController.swift in Sources */,
 				B19520A624FEE69800AEBAA6 /* AppDelegate.swift in Sources */,
 				B19520C224FEEC5000AEBAA6 /* Question.swift in Sources */,

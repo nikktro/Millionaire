@@ -15,6 +15,7 @@ class GameViewController: UIViewController, GameVCDelegate {
     @IBOutlet weak var answerButtonB: UIButton!
     @IBOutlet weak var answerButtonC: UIButton!
     @IBOutlet weak var answerButtonD: UIButton!
+    @IBOutlet weak var questionNumberLabel: UILabel!
     
     var gameSession = GameSession()
     
@@ -26,7 +27,12 @@ class GameViewController: UIViewController, GameVCDelegate {
         Game.shared.gameSession = gameSession
         gameSessionDelegate = gameSession
         gameSession.gameVCDeledate = self
-        showLevel(gameSession.gameLevel)
+        showLevel(gameSession.gameLevel.value)
+        
+        gameSession.gameLevel.addObserver(self, options: [.new, .initial]) { [weak self] (gameLevel, _) in
+            guard let self = self else { return }
+            self.questionNumberLabel.text = "Question # \(gameLevel + 1) / \(self.gameSession.questions.count)"
+        }
     }
     
     func showLevel(_ level: Int) {
@@ -51,22 +57,22 @@ class GameViewController: UIViewController, GameVCDelegate {
     
     @IBAction func pressedA() {
         gameSessionDelegate?.checkAnswer(userAnswer: "A") //TODO
-        showLevel(gameSession.gameLevel)
+        showLevel(gameSession.gameLevel.value)
     }
     
     @IBAction func pressedB() {
         gameSessionDelegate?.checkAnswer(userAnswer: "B") //TODO
-        showLevel(gameSession.gameLevel)
+        showLevel(gameSession.gameLevel.value)
     }
     
     @IBAction func pressedC() {
         gameSessionDelegate?.checkAnswer(userAnswer: "C") //TODO
-        showLevel(gameSession.gameLevel)
+        showLevel(gameSession.gameLevel.value)
     }
     
     @IBAction func pressedD() {
         gameSessionDelegate?.checkAnswer(userAnswer: "D") //TODO
-        showLevel(gameSession.gameLevel)
+        showLevel(gameSession.gameLevel.value)
     }
     
 

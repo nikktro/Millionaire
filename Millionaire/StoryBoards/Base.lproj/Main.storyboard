@@ -150,6 +150,12 @@
                                     <constraint firstItem="Tym-pV-qyJ" firstAttribute="height" secondItem="Xah-1b-5PZ" secondAttribute="height" id="R5u-IO-eeG"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-zt-eUn">
+                                <rect key="frame" x="20" y="100" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -158,11 +164,14 @@
                             <constraint firstItem="WlJ-zL-J3I" firstAttribute="trailing" secondItem="VS9-dk-YGa" secondAttribute="trailing" constant="10" id="THm-KE-vak"/>
                             <constraint firstItem="09H-el-z07" firstAttribute="centerY" secondItem="kJg-pj-VMj" secondAttribute="centerY" id="ZLV-Wm-A9K"/>
                             <constraint firstItem="09H-el-z07" firstAttribute="leading" secondItem="kJg-pj-VMj" secondAttribute="leading" constant="10" id="ZMe-co-TYz"/>
+                            <constraint firstItem="T8W-zt-eUn" firstAttribute="leading" secondItem="WlJ-zL-J3I" secondAttribute="leading" constant="20" id="cVp-FT-Cd8"/>
                             <constraint firstItem="VS9-dk-YGa" firstAttribute="leading" secondItem="WlJ-zL-J3I" secondAttribute="leading" constant="10" id="dVl-LY-OeA"/>
                             <constraint firstItem="WlJ-zL-J3I" firstAttribute="trailing" secondItem="Ni3-00-UXO" secondAttribute="trailing" constant="10" id="dZg-h1-mKQ"/>
                             <constraint firstItem="VS9-dk-YGa" firstAttribute="centerX" secondItem="kJg-pj-VMj" secondAttribute="centerX" id="hsB-nH-sHQ"/>
                             <constraint firstItem="Ni3-00-UXO" firstAttribute="top" secondItem="VS9-dk-YGa" secondAttribute="bottom" constant="10" id="jzz-YL-U41"/>
+                            <constraint firstItem="WlJ-zL-J3I" firstAttribute="trailing" secondItem="T8W-zt-eUn" secondAttribute="trailing" constant="20" id="mjD-NH-J6b"/>
                             <constraint firstItem="Ni3-00-UXO" firstAttribute="leading" secondItem="WlJ-zL-J3I" secondAttribute="leading" constant="10" id="sj1-OT-6gX"/>
+                            <constraint firstItem="T8W-zt-eUn" firstAttribute="top" secondItem="WlJ-zL-J3I" secondAttribute="top" constant="100" id="xxa-FY-Oym"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WlJ-zL-J3I"/>
                     </view>
@@ -173,6 +182,7 @@
                         <outlet property="answerButtonC" destination="lKu-wH-AXO" id="7Xm-V6-ORX"/>
                         <outlet property="answerButtonD" destination="lV1-jb-6m9" id="WVV-Oj-XEn"/>
                         <outlet property="questionLabel" destination="09H-el-z07" id="DfU-Tt-FCc"/>
+                        <outlet property="questionNumberLabel" destination="T8W-zt-eUn" id="0zA-Yk-JxN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKl-SU-nvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
