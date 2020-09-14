@@ -21,8 +21,6 @@ class MainViewController: UIViewController {
         case "settings":
             let settingsVC = seg.source as! SettingsViewController
             Game.shared.selectedSequenceIndex = settingsVC.sequenceSelector.selectedSegmentIndex
-        case "addQuestion":
-            print("addQuestion")
         default:
             break
         }

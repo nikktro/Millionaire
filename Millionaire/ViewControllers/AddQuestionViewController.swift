@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddQuestionViewController: UIViewController {
+class AddQuestionViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var userQuestionTextView: UITextView!
     @IBOutlet weak var answerATextField: UITextField!
@@ -18,12 +18,21 @@ class AddQuestionViewController: UIViewController {
     @IBOutlet weak var rightAnswerSelector: UISegmentedControl!
         
     override func viewDidLoad() {
+        userQuestionTextView.delegate = self
+        userQuestionTextView.textColor = UIColor.lightGray
         super.viewDidLoad()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
     }
     
     @IBAction func saveButtonPressed() {
@@ -55,7 +64,7 @@ class AddQuestionViewController: UIViewController {
                                     rightAnswer: rightAnswer)
         
         Game.shared.userQuestions.append(userQuestion)
-        
+        dismiss(animated: true)
     }
     
 }
