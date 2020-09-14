@@ -13,9 +13,16 @@ class Game {
     static let shared = Game()
     
     private let statisticCaretaker = StatisticsCaretaker()
+    private let userQuestionCaretaker = UserQuestionCaretaker()
     private(set) var statistics: [Statistic] {
         didSet {
             statisticCaretaker.save(statistics: statistics)
+        }
+    }
+    
+    var userQuestions: [Question] {
+        didSet {
+            userQuestionCaretaker.save(userQuestions: userQuestions)
         }
     }
     
@@ -25,6 +32,7 @@ class Game {
     
     private init() {
         self.statistics = statisticCaretaker.load()
+        self.userQuestions = userQuestionCaretaker.load()
     }
     
     func calcRightAnswer(_ statistic: Statistic) -> Double {

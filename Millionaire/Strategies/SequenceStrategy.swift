@@ -14,14 +14,14 @@ protocol StrategyProtocol: class {
 
 class Сonsistently: StrategyProtocol {
     func generateQuestions() -> [Question] {
-        let questions = Question.getQuestions()
+        let questions = Question.getQuestions() + Game.shared.userQuestions
         return questions
     }
 }
 
 class Shuffled: StrategyProtocol {
     func generateQuestions() -> [Question] {
-        let questions = Question.getQuestions().shuffled()
+        let questions = (Question.getQuestions() + Game.shared.userQuestions).shuffled()
         return questions
     }
 }

@@ -16,8 +16,17 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwind(_ seg: UIStoryboardSegue) {
-        let settingsVC = seg.source as! SettingsViewController
-        Game.shared.selectedSequenceIndex = settingsVC.sequenceSelector.selectedSegmentIndex
+        guard let identifier = seg.identifier else { return }
+        switch identifier {
+        case "settings":
+            let settingsVC = seg.source as! SettingsViewController
+            Game.shared.selectedSequenceIndex = settingsVC.sequenceSelector.selectedSegmentIndex
+        case "addQuestion":
+            print("addQuestion")
+        default:
+            break
+        }
+        
     }
 
 

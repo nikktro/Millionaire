@@ -15,7 +15,7 @@ struct Question {
 }
 
 
-extension Question {
+extension Question: Codable {
     static func getQuestions() -> [Question] {
         return [
             Question(question: "Какой газ преобладает в атмосфере Земли?",
