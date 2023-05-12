@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol StrategyProtocol: class {
+protocol StrategyProtocol: AnyObject {
     func generateQuestions() -> [Question]
 }
 
@@ -48,4 +48,3 @@ class GenerateQuestion: StrategyProtocol {
         }
     }
 }
-

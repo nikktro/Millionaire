@@ -10,11 +10,6 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
     @IBAction func unwind(_ seg: UIStoryboardSegue) {
         guard let identifier = seg.identifier else { return }
         switch identifier {
@@ -24,9 +19,5 @@ class MainViewController: UIViewController {
         default:
             break
         }
-        
     }
-
-
 }
-

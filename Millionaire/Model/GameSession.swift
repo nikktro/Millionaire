@@ -9,7 +9,6 @@
 import Foundation
 
 class GameSession {
-    
     let questions = GenerateQuestion.questionStrategy(selectedSequenceIndex: Game.shared.selectedSequenceIndex)
     var gameLevel = Observable<Int>(0)
     var rightAnswer = 0
@@ -17,7 +16,6 @@ class GameSession {
 }
 
 extension GameSession: GameSessionDelegate {
-    
     func checkAnswer(userAnswer: String) {
         if  userAnswer == questions[gameLevel.value].rightAnswer {
             print("Right answer")
@@ -35,5 +33,4 @@ extension GameSession: GameSessionDelegate {
         }
         
     }
-    
 }

@@ -26,5 +26,3 @@ struct Statistic: Codable {
         return dateFormatter.string(from: date)
     }
 }
-
-

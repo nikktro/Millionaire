@@ -66,5 +66,4 @@ class AddQuestionViewController: UIViewController, UITextViewDelegate {
         Game.shared.userQuestions.append(userQuestion)
         dismiss(animated: true)
     }
-    
 }

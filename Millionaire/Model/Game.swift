@@ -43,7 +43,4 @@ class Game {
         statistics.append(record)
         gameSession = nil
     }
-    
-    
-    
 }

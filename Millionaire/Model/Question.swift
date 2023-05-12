@@ -14,7 +14,6 @@ struct Question {
     var rightAnswer: String
 }
 
-
 extension Question: Codable {
     static func getQuestions() -> [Question] {
         return [
@@ -87,9 +86,7 @@ extension Question: Codable {
                                "C": "Норвегия",
                                "D": "Дания"],
                      rightAnswer: "C")
-            
         ]
         
     }
-    
 }

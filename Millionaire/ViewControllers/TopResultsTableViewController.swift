@@ -17,12 +17,10 @@ class TopResultsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Game.shared.statistics.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topResults", for: indexPath)
         
@@ -32,6 +30,4 @@ class TopResultsTableViewController: UITableViewController {
         
         return cell
     }
-    
-
 }

@@ -20,10 +20,10 @@ class GameViewController: UIViewController, GameVCDelegate {
     var gameSession = GameSession()
     
     weak var gameSessionDelegate: GameSessionDelegate?
-    
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         Game.shared.gameSession = gameSession
         gameSessionDelegate = gameSession
         gameSession.gameVCDeledate = self
@@ -74,8 +74,4 @@ class GameViewController: UIViewController, GameVCDelegate {
         gameSessionDelegate?.checkAnswer(userAnswer: "D") //TODO
         showLevel(gameSession.gameLevel.value)
     }
-    
-
-    
-    
 }

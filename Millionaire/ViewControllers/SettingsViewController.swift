@@ -16,5 +16,4 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         sequenceSelector.selectedSegmentIndex = Game.shared.selectedSequenceIndex
     }
-        
 }
